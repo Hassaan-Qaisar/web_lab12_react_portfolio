@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/Soumyajit_Behera-BIT_MESRA.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
@@ -29,7 +28,6 @@ function ResumeNew() {
           <Button
             variant="primary"
             onClick={handleDownloadClick}
-            href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
