@@ -6,6 +6,7 @@ import project1 from "../../Assets/Projects/project1.png";
 import project2 from "../../Assets/Projects/project2.png";
 import project3 from "../../Assets/Projects/project3.png";
 import project4 from "../../Assets/Projects/project4.png";
+import project5 from "../../Assets/Projects/project5.png";
 
 function Projects() {
   return (
@@ -60,6 +61,17 @@ function Projects() {
               description="Stay organized with my React-based Contact Saving App. Easily manage your contacts by adding, editing, and deleting entries. Quickly find the information you need with the search feature, making contact management a breeze."
               ghLink="https://github.com/Hassaan-Qaisar/contacts-react"
               demoLink="https://contacts-react-eta.vercel.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={project5}
+              isBlog={false}
+              title="Portfolio using HTML and CSS"
+              description="Revamped my personal portfolio website, originally crafted in pure HTML and CSS. The redesign incorporates modern design principles, interactive elements, and responsive layouts to showcase projects, skills, and accomplishments in an engaging and accessible manner."
+              ghLink="https://github.com/Hassaan-Qaisar/portfolio"
+              demoLink="https://hassaan-qaisar.netlify.app/"
             />
           </Col>
 
