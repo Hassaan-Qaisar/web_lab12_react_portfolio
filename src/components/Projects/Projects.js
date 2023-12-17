@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
@@ -9,6 +9,22 @@ import project4 from "../../Assets/Projects/project4.png";
 import project5 from "../../Assets/Projects/project5.png";
 
 function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/projects');
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -20,6 +36,20 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+        {/* {projects.map((project) => (
+          <Col md={4} className="project-card" key={project._id}>
+            <ProjectCard
+              imgPath={project1}
+              title={project.title}
+              description={project.description}
+              ghLink={project.ghLink}
+              demoLink={project.demoLink}
+            />
+          </Col>
+        ))} */}
+
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={project1}
